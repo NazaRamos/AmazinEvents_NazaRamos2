@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Events - Home</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="d-flex justify-content-between align-items-center px-3">
+      <img class="h-100" src="./assets/images/amazing_brand.png" alt="amazing_events_logo">
+      <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./assets/pages/upcomingEvents.html">Upcoming Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./assets/pages/pastEvents.html">Past Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./assets/pages/contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./assets/pages/stats.html">Stats</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="d-flex flex-column">
+        <div id="carouselExampleAutoplaying" class="carousel slide carrusel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/images/optional_banner_1.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-block">
+                  <h1>HOME</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/optional_banner_2.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-block">
+                  <h1>HOME</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/optional_banner_3.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-block">
+                  <h1>HOME</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/optional_banner_4.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-block">
+                  <h1>HOME</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/optional_banner_5.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-block">
+                  <h1>HOME</h1>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div id="contenedorCheckbox" class="d-flex flex-wrap justify-content-center gap-2 px-2 my-3 w-100">
+          
+        </div>
+        <div class="d-flex justify-content-center px-2 my-3 w-100">
+          <label for="search"></label>
+          <input type="search" id="search" name="search">
+        </div>
+        <div class="d-flex flex-wrap justify-content-center gap-3 py-3" id="card-container">
+            
+        </div>
+    </main>
+
+    <footer class="d-flex w-100 justify-content-between align-items-center px-3">
+        <div class="footer d-flex gap-2 p-2">
+            <a href=""><img src="./assets/images/facebook.png" alt="facebook_logo_link"></a>
+            <a href=""><img src="./assets/images/instagram.png" alt="instagram_logo_link"></a>
+            <a href=""><img src="./assets/images/whatsapp.png" alt="whatsapp_logo_link"></a>
+        </div>
+        <p class="pt-3">COHORT 50</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="./assets/script/dataAmazingEvents.js"></script>
+    <script src="./assets/script/home.js"></script>
+</body>
+
+</html>
