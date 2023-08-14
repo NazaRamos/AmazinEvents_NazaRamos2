@@ -16,6 +16,10 @@ function mostrarTarjeta(evento) {
     </section>`;
 }
 
+let contenedorCheckbox = document.getElementById("contenedorCheckbox");
+
+let categoriesCheckbox = Array.from(new Set(eventos.map(evento => evento.category)));
+
 function mostrarCheckbox(categories, contenedorCheckbox) {
   let checkbox = "";
   for (const category of categories) {
@@ -27,9 +31,9 @@ function mostrarCheckbox(categories, contenedorCheckbox) {
   contenedorCheckbox.innerHTML = checkbox;
 }
 
-function filtrarPorBarra(eventos, busqueda) {
-  return eventos.filter(elemento => elemento.name.toLowerCase().includes(busqueda.toLowerCase()));
-}
+mostrarCheckbox(categoriesCheckbox, contenedorCheckbox);
+
+contenedorCheckbox.addEventListener("change", filtroCruzado);
 
 function filtrarPorCheckbox(eventos, categorias) {
   if (categorias.length === 0) {
@@ -39,22 +43,24 @@ function filtrarPorCheckbox(eventos, categorias) {
   }
 }
 
+let search = document.getElementById("search");
+
+function filtrarPorBarra(eventos, busqueda) {
+  return eventos.filter(elemento => elemento.name.toLowerCase().includes(busqueda.toLowerCase()));
+}
+
+search.addEventListener("input", filtroCruzado);
+
 function filtroCruzado() {
   let checkbox = Array.from(document.querySelectorAll("input[type=checkbox]:checked")).map(elemento => elemento.value);
   let filtroPorBarra = filtrarPorBarra(eventos, search.value);
   let filtroPorCheck = filtrarPorCheckbox(filtroPorBarra, checkbox);
-  
-  contenedorTarjeta.innerHTML = filtroPorCheck.map(evento => mostrarTarjeta(evento)).join("");
+  let mapeoFiltroCruzado = filtroPorCheck.map(evento => mostrarTarjeta(evento))
+  if ( mapeoFiltroCruzado.length !== 0 ){
+    contenedorTarjeta.innerHTML = mapeoFiltroCruzado
+  } else {
+    contenedorTarjeta.innerHTML = `<h2>Oops, looks like there's nothing here! Please, try again.</h2>`
+  }
 }
-
-let contenedorCheckbox = document.getElementById("contenedorCheckbox");
-contenedorCheckbox.addEventListener("change", filtroCruzado);
-
-let search = document.getElementById("search");
-search.addEventListener("input", filtroCruzado);
-
-let categoriesCheckbox = Array.from(new Set(eventos.map(evento => evento.category)));
-
-mostrarCheckbox(categoriesCheckbox, contenedorCheckbox);
 
 filtroCruzado();
