@@ -57,6 +57,10 @@ table{
     min-height: 40vh;
     align-self: center;
 }
+#table1{
+    min-height: 15vh;
+    align-self: center;
+}
 td{
     min-height: 1em;
 }
@@ -76,7 +80,7 @@ th{
     color: #ACC196;
 }
 .emptycell, .fullcell{
-    height: 1.5em;
+    height: 2.5em;
     font-size: 1em;
     font-weight: bolder;
 }
