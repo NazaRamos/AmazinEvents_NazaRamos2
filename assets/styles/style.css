@@ -76,8 +76,9 @@ th{
     color: #ACC196;
 }
 .emptycell, .fullcell{
-    height: 3em;
-    font-size: 0.8em;
+    height: 1.5em;
+    font-size: 1em;
+    font-weight: bolder;
 }
 .detailsbox{
     justify-self: center;
