@@ -52,6 +52,7 @@ fetch("https://mindhub-xj03.onrender.com/api/amazing")
     /***************************************************************/
     
 })
+.catch(err => console.log(err))
 
 function compararPorcentajes(a,b){
     return b.percentage - a.percentage
