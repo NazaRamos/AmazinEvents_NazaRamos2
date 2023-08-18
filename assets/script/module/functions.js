@@ -2,8 +2,7 @@
 
 /*------------------------------------------------------------------------------------------- */
     export function mostrarTarjeta(evento) {
-        return `
-        <section class="card" style="width: 18rem;">
+        return `<section class="card" style="width: 18rem;">
             <img src="${evento.image}" class="card-img-top" alt="school_book_fair">
             <div class="card-body d-flex flex-column align-items-center text-center">
                 <h5 class="card-title">${evento.name}</h5>
@@ -15,8 +14,8 @@
             </div>
             </section>`;
     }
-
-    export   function mostrarCheckbox(categories, contenedorCheckbox) {
+    
+    export function mostrarCheckbox(categories, contenedorCheckbox) {
   
     let checkbox = "";
     for (const category of categories) {
